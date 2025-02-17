@@ -221,7 +221,7 @@ const animationTimeline = () => {
       "-=2"
     )
     .from(".hat", 0.5, {
-      x: -100,
+      x: 0,
       y: 350,
       rotation: -180,
       opacity: 0
@@ -282,7 +282,45 @@ const animationTimeline = () => {
       y: 30,
       zIndex: "-1"
     })
-    .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
+    .from(".reasons-title", 0.7, {
+      scale: 0.2,
+      opacity: 0
+    })
+    .to(".reasons-title", 0.7, {
+      opacity: 0,
+      y: 30
+    }, "+=2")
+    .staggerFrom(".reasons-1 p", 5, {
+      scale: 0.5,
+      opacity: 0,
+      x: -50,
+      ease: Back.easeOut
+    }, 0.2)
+    .to(".reasons-1", 2, {
+      opacity: 0,
+      y: 30
+    }, "+=2")
+    .staggerFrom(".reasons-2 p", 5, {
+      scale: 0.5,
+      opacity: 0,
+      x: 50,
+      ease: Back.easeOut
+    }, 0.2)
+    .to(".reasons-2", 2, {
+      opacity: 0,
+      y: 30
+    }, "+=2")
+    .staggerFrom(".reasons-3 p", 5, {
+      scale: 0.5,
+      opacity: 0,
+      y: 50,
+      ease: Back.easeOut
+    }, 0.2)
+    .to(".reasons-3", 3, {
+      opacity: 0,
+      y: 30
+    }, "+=2")
+    .staggerFrom(".ten p", 1, ideaTextTrans, 1.2)
     .to(
       ".last-smile",
       0.5,
